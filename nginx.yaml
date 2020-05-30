@@ -1,0 +1,13 @@
+---
+- name: Install Nginx Server
+  hosts: all
+  become: true 
+
+  tasks:
+    apt:
+      name: nginx
+      state: latest
+    
+    service:
+     name: nginx
+     start: started
